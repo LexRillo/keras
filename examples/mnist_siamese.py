@@ -64,7 +64,7 @@ def create_pairs(x, digit_indices):
             z1, z2 = digit_indices[d][i], digit_indices[dn][i]
             pairs += [[x[z1], x[z2]]]
             labels += [1, 0]
-    return np.array(pairs), np.array(labels)
+    return np.array(pairs), np.array(labels).astype('float32')
 
 
 def create_base_network(input_shape):
